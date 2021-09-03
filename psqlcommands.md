@@ -67,7 +67,7 @@ ALTER TABLE table_to_change
 |command  | action |
 |--|--|
 | `ALTER TABLE table_name RENAME TO new_name;` | rename the table |
-`ALTER TABLE all_usersc RENAME COLUMN username TO full_name;`| | |
+`ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
 
 Query Buffer
   \e [FILE] [LINE]       edit the query buffer (or file) with external editor
@@ -179,7 +179,7 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzM1MTc4MzQsMTg1MjQxMjU3Niw3Nj
+eyJoaXN0b3J5IjpbLTE1MTM1NDAwNDYsMTg1MjQxMjU3Niw3Nj
 AwNzg5MzYsMTg3OTkzOTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4
 NDY4LC0xOTI2NzUwNTA0XX0=
 -->
