@@ -73,10 +73,10 @@ ALTER TABLE table_to_change
 |`ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;` | add `NOT NULL` constraint|
 |`ALTER TABLE table_name ADD CONSTRAINT [constraint_name] constraint_clause;`| add literally any other constraint|
 |`ALTER TABLE table_name DROP CONSTRAINT constraint_name;`| drop a constraint|
-|`ALTER TABLE all_usersALTER COLUMN id DROP DEFAULT;`||
+|`ALTER TABLE table_name ALTER COLUMN id DROP DEFAULT;`| dropping default is different because it is not a constraint|
 |`ALTER CONSTRAINT`| change certain aspects of Foreign Key constraints|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzg1NzU4NzksLTExNTg3NDA3MjQsLT
+eyJoaXN0b3J5IjpbLTEzMTEzMDcxNzgsLTExNTg3NDA3MjQsLT
 EzMjgwODY5NjgsLTE1MTM1NDAwNDYsMTg1MjQxMjU3Niw3NjAw
 Nzg5MzYsMTg3OTkzOTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4ND
 Y4LC0xOTI2NzUwNTA0XX0=
