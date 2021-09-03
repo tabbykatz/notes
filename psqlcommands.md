@@ -44,7 +44,7 @@ CREATE TABLE table_name (
 
 |Data Type|Description|
 |--|--|
-|serial|This data type is used to create identifier columns for a PostgreSQL database. These identifiers are integers, auto-incrementing, and cannot contain a null value.|
+|serial*|This data type is used to create identifier columns for a PostgreSQL database. These identifiers are integers, auto-incrementing, and cannot contain a null value.|
 | char(N) | This data type specifies that information stored in a column can contain strings of up to N characters in length. If a string less than length N is stored, then the remaining string length is filled with space characters. |
 |varchar(N)|This data type specifies that information stored in a column can contain strings of up to N characters in length. If a string less than length N is stored, then the remaining string length isn't used.
 |boolean|This is a data type that can only contain two values "true" or "false". In PostgreSQL, boolean values are often displayed in a shorthand format, t or f
@@ -52,7 +52,7 @@ CREATE TABLE table_name (
 |decimal(precision, scale)|The decimal type takes two arguments, one being the total number of digits in the entire number on both sides of the decimal point (the precision), the second is the number of the digits in the fractional part of the number to the right of the decimal point (the scale).
 |timestamp|The timestamp type contains both a simple date and time in YYYY-MM-DD HH:MM:SS format.
 |date|The date type contains a date but no time.
-
+|*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.|
 
 
 General
@@ -192,5 +192,5 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjY3NTA1MDRdfQ==
+eyJoaXN0b3J5IjpbLTcwNjk3NDY5OCwtMTkyNjc1MDUwNF19
 -->
