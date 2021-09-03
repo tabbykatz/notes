@@ -52,7 +52,7 @@ CREATE TABLE table_name (
 |decimal(precision, scale)|The decimal type takes two arguments, one being the total number of digits in the entire number on both sides of the decimal point (the precision), the second is the number of the digits in the fractional part of the number to the right of the decimal point (the scale).
 |timestamp|The timestamp type contains both a simple date and time in YYYY-MM-DD HH:MM:SS format.
 |date|The date type contains a date but no time.
-|*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.|
+|*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.
 
 
 General
@@ -192,5 +192,5 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNjk3NDY5OCwtMTkyNjc1MDUwNF19
+eyJoaXN0b3J5IjpbMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
 -->
