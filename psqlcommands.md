@@ -54,7 +54,7 @@ CREATE TABLE table_name (
 |date|The date type contains a date but no time.
 |*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.
 
-
+### 
 General
   \copyright             show PostgreSQL usage and distribution terms
   \crosstabview [COLUMNS] execute query and display results in crosstab
@@ -192,5 +192,6 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
+eyJoaXN0b3J5IjpbMTA1OTE3MjY5NSwxMzAxNDY4NDY4LC0xOT
+I2NzUwNTA0XX0=
 -->
