@@ -71,10 +71,10 @@ ALTER TABLE table_to_change
 `ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
 |`ALTER TABLE table_name ALTER COLUMN col_name TYPE new_data_type;`| change a column's data type|
 |||
-|||
+|`ALTER CONSTRAINT`| change certain aspects of Foreign Key constraints|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2MzYwNjY2LC0xMzI4MDg2OTY4LC0xNT
-EzNTQwMDQ2LDE4NTI0MTI1NzYsNzYwMDc4OTM2LDE4Nzk5Mzk1
-NDYsLTEyNTYzODkzNzEsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF
-19
+eyJoaXN0b3J5IjpbLTYwMjU3MzcwOCwtMTMyODA4Njk2OCwtMT
+UxMzU0MDA0NiwxODUyNDEyNTc2LDc2MDA3ODkzNiwxODc5OTM5
+NTQ2LC0xMjU2Mzg5MzcxLDEzMDE0Njg0NjgsLTE5MjY3NTA1MD
+RdfQ==
 -->
