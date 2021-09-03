@@ -68,7 +68,7 @@ ALTER TABLE table_to_change
 |--|--|
 | `ALTER TABLE table_name RENAME TO new_name;` | rename the table |
 `ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
-
+|`ALTER TABLE table_name ALTER COLUMN col_name TYPE varchar(25);`||
 Query Buffer
   \e [FILE] [LINE]       edit the query buffer (or file) with external editor
   \ef [FUNCNAME [LINE]]  edit function definition with external editor
@@ -179,7 +179,7 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTM1NDAwNDYsMTg1MjQxMjU3Niw3Nj
-AwNzg5MzYsMTg3OTkzOTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4
-NDY4LC0xOTI2NzUwNTA0XX0=
+eyJoaXN0b3J5IjpbNjk5NzY5MTY4LC0xNTEzNTQwMDQ2LDE4NT
+I0MTI1NzYsNzYwMDc4OTM2LDE4Nzk5Mzk1NDYsLTEyNTYzODkz
+NzEsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
 -->
