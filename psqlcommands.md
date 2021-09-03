@@ -13,7 +13,7 @@
 
 | metacommand | action |
 |--|--|
-
+| `\r`| reset the query buffer  |
 |`\l`| list all databases |
 | `\c database_name` |  connect|
 | `\dt` | list tables in current db by schema |
@@ -169,6 +169,6 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NjU2MjI0MiwxODc5OTM5NTQ2LC0xMj
-U2Mzg5MzcxLDEzMDE0Njg0NjgsLTE5MjY3NTA1MDRdfQ==
+eyJoaXN0b3J5IjpbNzYwMDc4OTM2LDE4Nzk5Mzk1NDYsLTEyNT
+YzODkzNzEsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
 -->
