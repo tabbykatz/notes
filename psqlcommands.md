@@ -13,6 +13,7 @@
 
 | metacommand | action |
 |--|--|
+
 |`\l`| list all databases |
 | `\c database_name` |  connect|
 | `\dt` | list tables in current db by schema |
@@ -55,34 +56,8 @@ CREATE TABLE table_name (
 |date|The date type contains a date but no time.
 |*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.
 
-###  Alter Table Syntax
+###  ALTER TABLE Syntax
 
-General
-  \copyright             show PostgreSQL usage and distribution terms
-  \crosstabview [COLUMNS] execute query and display results in crosstab
-  \errverbose            show most recent error message at maximum verbosity
-  \g [(OPTIONS)] [FILE]  execute query (and send results to file or |pipe);
-                         \g with no arguments is equivalent to a semicolon
-  \gdesc                 describe result of query, without executing it
-  \gexec                 execute query, then execute each value in its result
-General
-  \copyright             show PostgreSQL usage and distribution terms
-  \crosstabview [COLUMNS] execute query and display results in crosstab
-  \errverbose            show most recent error message at maximum verbosity
-  \g [(OPTIONS)] [FILE]  execute query (and send results to file or |pipe);
-                         \g with no arguments is equivalent to a semicolon
-  \gdesc                 describe result of query, without executing it
-  \gexec                 execute query, then execute each value in its result
-  \gset [PREFIX]         execute query and store results in psql variables
-  \gx [(OPTIONS)] [FILE] as \g, but forces expanded output mode
-  \q                     quit psql
-  \watch [SEC]           execute query every SEC seconds
-
-Help
-  \? [commands]          show help on backslash commands
-  \? options             show help on psql command-line options
-  \? variables           show help on special variables
-  \h [NAME]              help on syntax of SQL commands, * for all commands
 
 Query Buffer
   \e [FILE] [LINE]       edit the query buffer (or file) with external editor
@@ -194,6 +169,6 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTA5OTMyOCwxODc5OTM5NTQ2LC0xMj
+eyJoaXN0b3J5IjpbMTA3NjU2MjI0MiwxODc5OTM5NTQ2LC0xMj
 U2Mzg5MzcxLDEzMDE0Njg0NjgsLTE5MjY3NTA1MDRdfQ==
 -->
