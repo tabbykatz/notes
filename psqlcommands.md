@@ -78,9 +78,11 @@ ALTER TABLE table_to_change
 |`ALTER TABLE table_name DROP COLUMN col_name`| remove a column|
 |`DROP TABLE table_name;`| Drop a table. Not reversible.|
 |`ALTER CONSTRAINT`| change certain aspects of Foreign Key constraints|
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NDIwMzI0OCwtMTE1ODc0MDcyNCwtMT
-MyODA4Njk2OCwtMTUxMzU0MDA0NiwxODUyNDEyNTc2LDc2MDA3
-ODkzNiwxODc5OTM5NTQ2LC0xMjU2Mzg5MzcxLDEzMDE0Njg0Nj
-gsLTE5MjY3NTA1MDRdfQ==
+eyJoaXN0b3J5IjpbMTg3MTcyNjY2OCwxMDk0MjAzMjQ4LC0xMT
+U4NzQwNzI0LC0xMzI4MDg2OTY4LC0xNTEzNTQwMDQ2LDE4NTI0
+MTI1NzYsNzYwMDc4OTM2LDE4Nzk5Mzk1NDYsLTEyNTYzODkzNz
+EsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
 -->
