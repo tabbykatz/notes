@@ -64,8 +64,10 @@ ALTER TABLE table_to_change
 ```
 *to alter schema
 
-
-
+|command  | action |
+|--|--|
+| `ALTER TABLE table_name RENAME TO new_name;` | rename the table |
+| | |
 
 Query Buffer
   \e [FILE] [LINE]       edit the query buffer (or file) with external editor
@@ -177,7 +179,7 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4Mjg2NzMyLDE4NTI0MTI1NzYsNzYwMD
-c4OTM2LDE4Nzk5Mzk1NDYsLTEyNTYzODkzNzEsMTMwMTQ2ODQ2
-OCwtMTkyNjc1MDUwNF19
+eyJoaXN0b3J5IjpbMjA4NzY5NzI2NiwxODUyNDEyNTc2LDc2MD
+A3ODkzNiwxODc5OTM5NTQ2LC0xMjU2Mzg5MzcxLDEzMDE0Njg0
+NjgsLTE5MjY3NTA1MDRdfQ==
 -->
