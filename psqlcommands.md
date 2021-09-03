@@ -35,7 +35,8 @@ CREATE TABLE table_name (
 | command word | meaning |datatype| constraint or default value|
 |--|--|--|--|
 |`CREATE TABLE name (` | make a table named 'name'| | |
-| `id serial UNIQUE NOT NULL,` | column called id | serial| UNIQUE NOT NULL|
+| `id serial UNIQUE NOT NULL,` | column called id | serial| UNIQUE: prevents any duplicate values from being entered into that column.
+| | | |NOT NULL: |
 | `username char (25),` | col called username | char(25)|none|
 | `enabled boolean DEFAULT TRUE);` | col called enabled |boolean | DEFAULT TRUE|
 | |  |  |
@@ -192,6 +193,6 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1OTE3MjY5NSwxMzAxNDY4NDY4LC0xOT
+eyJoaXN0b3J5IjpbLTUzNjY3NTI1OCwxMzAxNDY4NDY4LC0xOT
 I2NzUwNTA0XX0=
 -->
