@@ -57,6 +57,12 @@ CREATE TABLE table_name (
 |*The use of `serial` is [no longer recommended](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Don.27t_use_serial) for new (production) applications.
 
 ###  ALTER TABLE Syntax
+```psql
+ALTER TABLE table_to_change
+    stuff_to_change_goes_here
+    additional_arguments
+```
+
 
 
 Query Buffer
@@ -169,6 +175,7 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwMDc4OTM2LDE4Nzk5Mzk1NDYsLTEyNT
-YzODkzNzEsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF19
+eyJoaXN0b3J5IjpbMTg1MjQxMjU3Niw3NjAwNzg5MzYsMTg3OT
+kzOTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4NDY4LC0xOTI2NzUw
+NTA0XX0=
 -->
