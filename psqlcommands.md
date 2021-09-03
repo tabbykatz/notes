@@ -70,9 +70,11 @@ ALTER TABLE table_to_change
 | `ALTER TABLE table_name RENAME TO new_name;` | rename the table |
 `ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
 |`ALTER TABLE table_name ALTER COLUMN col_name TYPE new_data_type;`| change a column's data type|
-
+|||
+|||
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjgwODY5NjgsLTE1MTM1NDAwNDYsMT
-g1MjQxMjU3Niw3NjAwNzg5MzYsMTg3OTkzOTU0NiwtMTI1NjM4
-OTM3MSwxMzAxNDY4NDY4LC0xOTI2NzUwNTA0XX0=
+eyJoaXN0b3J5IjpbODg2MzYwNjY2LC0xMzI4MDg2OTY4LC0xNT
+EzNTQwMDQ2LDE4NTI0MTI1NzYsNzYwMDc4OTM2LDE4Nzk5Mzk1
+NDYsLTEyNTYzODkzNzEsMTMwMTQ2ODQ2OCwtMTkyNjc1MDUwNF
+19
 -->
