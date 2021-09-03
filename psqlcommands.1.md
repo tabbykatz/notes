@@ -16,6 +16,7 @@
 |`\l`| list all databases |
 | `\c database_name` |  connect|
 | `\dt` | list tables in current db |
+|`\d`|describe a table's schema|
 |  `\q`| quit |
 | `\s`| show your command history!|
 
@@ -192,5 +193,6 @@ Input/Output
   \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
   \warn [-n] [STRING]    write string to standard error (-n for no newline)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTYzODkzNzEsMTMwMTQ2ODQ2OF19
+eyJoaXN0b3J5IjpbLTg1NjQ0MTE3MiwtMTI1NjM4OTM3MSwxMz
+AxNDY4NDY4XX0=
 -->
