@@ -71,13 +71,13 @@ ALTER TABLE table_to_change
 `ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
 |`ALTER TABLE table_name ALTER COLUMN col_name TYPE new_data_type;`| change a column's data type|
 |`ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;` | add `NOT NULL` constraint|
-|`ALTER TABLE table_name ADD CONSTRAINT [constraint_name] constraint_clause;`| Add literally any other constraint|
-|||
-|||
+|`ALTER TABLE table_name ADD CONSTRAINT [constraint_name] constraint_clause;`| add literally any other constraint|
+|`ALTER TABLE table_name DROP CONSTRAINT constraint_name;`| drop a constraint|
+|`ALTER TABLE all_usersALTER COLUMN id DROP DEFAULT;`||
 |`ALTER CONSTRAINT`| change certain aspects of Foreign Key constraints|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTg3NDA3MjQsLTEzMjgwODY5NjgsLT
-E1MTM1NDAwNDYsMTg1MjQxMjU3Niw3NjAwNzg5MzYsMTg3OTkz
-OTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4NDY4LC0xOTI2NzUwNT
-A0XX0=
+eyJoaXN0b3J5IjpbLTE3Mzg1NzU4NzksLTExNTg3NDA3MjQsLT
+EzMjgwODY5NjgsLTE1MTM1NDAwNDYsMTg1MjQxMjU3Niw3NjAw
+Nzg5MzYsMTg3OTkzOTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4ND
+Y4LC0xOTI2NzUwNTA0XX0=
 -->
