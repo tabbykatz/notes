@@ -70,10 +70,13 @@ ALTER TABLE table_to_change
 | `ALTER TABLE table_name RENAME TO new_name;` | rename the table |
 `ALTER TABLE table_name RENAME COLUMN col_name TO new_col_name;`| rename a column | 
 |`ALTER TABLE table_name ALTER COLUMN col_name TYPE new_data_type;`| change a column's data type|
-|`ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;` | add `|
+|`ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;` | add `NOT NULL` constraint|
+|`ALTER TABLE table_name ADD CONSTRAINT [constraint_name] constraint_clause;`| Add literally any other constraint|
+|||
+|||
 |`ALTER CONSTRAINT`| change certain aspects of Foreign Key constraints|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDIyNDc3NTIsLTEzMjgwODY5NjgsLT
+eyJoaXN0b3J5IjpbLTExNTg3NDA3MjQsLTEzMjgwODY5NjgsLT
 E1MTM1NDAwNDYsMTg1MjQxMjU3Niw3NjAwNzg5MzYsMTg3OTkz
 OTU0NiwtMTI1NjM4OTM3MSwxMzAxNDY4NDY4LC0xOTI2NzUwNT
 A0XX0=
