@@ -8,9 +8,11 @@
 
 ## Why
 
-Markdown is a very powerful, portable, and prolific markup language. You've definitely used it in one way or another, and learning to be more effective with it is a skill you should develop.
+Markdown is a very powerful, portable, and prolific markup language. You've definitely used it in one way or another, and using it effectively is a skill you should develop.
 
 Markdown can be used to create websites, documents, notes, books, presentations (I almost made today's presentation with [remark](https://remarkjs.com/#1) or [marp](https://marp.app/) but didn't have time), email messages, and technical documentation.
+
+> fun fact: I take my notes in simple Markdown. It is that easy and natural to write.
 
 Markdown was designed with the explicit intention of being easily readable by humans.
 
@@ -18,13 +20,15 @@ Markdown was designed with the explicit intention of being easily readable by hu
 
 He [Literally Wrote the Language](https://daringfireball.net/projects/markdown/)
 
+Later, check out [Common Mark](https://commonmark.org/)
+
 ## Let's assume you're using VSCode
 
 [Learn VSCode + Markdown specific stuff](https://code.visualstudio.com/docs/languages/markdown)
 
-Use Prettier to format Markdown. Use Prettier for everything, all the time. Format on save.
+Use Prettier to format Markdown. 💅 Use Prettier for everything, all the time. Format on save.
 
-Have questions about Prettier and setting up VSCode in general? Maybe we should have one of these just for that... but back to Markdown:
+Have questions about Prettier and setting up VSCode in general? Maybe we should have one of these just for that...any volunteers? but back to Markdown:
 
 Some examples to play with:
 
@@ -42,8 +46,6 @@ def something():
 | This | is   | a      | table |
 | ---- | ---- | ------ | ----- |
 | I    | love | Tables | !     |
-
-_hey_ **hey**... **_hey_**
 
 - [x] here's a task list
 - [x] list syntax required
