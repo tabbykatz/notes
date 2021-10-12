@@ -65,7 +65,9 @@ stuff in here
 
 <style type="text/css" rel="stylesheet">
  * { color: ; }
-</style>You can add CSS too!
+</style>
+
+You can add CSS, because it's all just html.
 
 ### LaTeX
 
@@ -73,7 +75,7 @@ stuff in here
 
 ![formula](<https://render.githubusercontent.com/render/math?math=\large\f(x)=sin(x)>)
 
-VS Code supports Markdown files out of the box. You just start writing Markdow text, save the file with the .md extension and then you can toggle the visualization of the editor between the code and the preview of the Markdown file; obviously, you can also open an existing Markdown file and start working with it. To switch between views, press ⇧⌘V in the editor. You can view the preview side-by-side (⌘K V) with the file you are editing and see changes reflected in real-time as you edit.
+VS Code supports Markdown files out of the box. You just start writing Markdown text, save the file with the .md extension and then you can toggle the visualization of the editor between the code and the preview of the Markdown file; obviously, you can also open an existing Markdown file and start working with it. To switch between views, press ⇧⌘V in the editor. You can view the preview side-by-side (⌘K V) with the file you are editing and see changes reflected in real-time as you edit.
 
 ## Or use Marked/similar to view live previews in different flavors of Markdown
 
