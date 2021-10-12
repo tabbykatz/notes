@@ -67,7 +67,7 @@ stuff in here
  * { color: ; }
 </style>
 
-You can add CSS, because it's all just html.
+You can add CSS, because it's all just html, but Github will sanitize inline scripts and styles so you'll need to work around that for your profile README. [Learn More about Github Markup](https://github.com/github/markup#github-markup)
 
 ### LaTeX
 
@@ -84,6 +84,19 @@ VS Code supports Markdown files out of the box. You just start writing Markdown 
 There are many different Markdown flavors. Today we care about Github flavored Markdown because we want to use this awesome markup language to make a profile README on GitHub.
 
 - [Github's Mastering Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+
+## General guidance on writing good READMEs
+
+- [Making READMEs Readable](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md)
+- [Curated list of awesome READMEs](https://github.com/matiassingers/awesome-readme)
+
+## Why make a profile README?
+
+- Github is social
+- People are going to look at your github. make it unique!
+- Can serve as a resume
+
+- [Github Docs on Profile READMEs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)
 
 ## How to make the README
 
