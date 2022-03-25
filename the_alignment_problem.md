@@ -46,7 +46,7 @@ Amazon's Mechanical Turk (!!!) saves the day woth ImageNet, a large dataset of i
 
 2000s - GPUs change everything, particularly with regard to training, because they can process so much in parallel.
 
-Alex Krizhevsky, a deep learning researcher, wins an ImageNet contest wiht AlexNet.
+Alex Krizhevsky, a deep learning researcher, wins an ImageNet contest with AlexNet.
 
 #### The problem
 
@@ -60,7 +60,7 @@ It's not a biased model/ algorithm. Its the training data.
 
 #### Fixes
 
-Joy Buolamwini, in the early 2010s, using a neural network to recognize faces.But it wouldn't recognize hers.
+Joy Buolamwini, in the early 2010s, using a neural network to recognize faces. But it wouldn't recognize hers.
 
 Training data, like IMageNet or LFW, ends up having fewer representations of minorities both in terms of race/ gender and lighting, quality.
 
@@ -72,9 +72,9 @@ Predictive models for missing words, computational linguistics.
 
 "curse of dimensionality"
 
-The solution: distributed representaitons. (e.g. `word2vec`) each word's representation is a measurment of how similar it is to any other. Using a model trained on stochastic gradient descent, we can predict the next nearest word.
+The solution: distributed representations. (e.g. `word2vec`) each word's representation is a measurment of how similar it is to any other. Using a model trained on stochastic gradient descent, we can predict the next nearest word.
 
-But it's sort of too good. It distills information out ot the relationships between words that we'd rather not see.
+But it's sort of too good. It distills information out of the relationships between words that we'd rather not see.
 
 #### Not just Demonstration but Perpetuation
 
@@ -82,7 +82,28 @@ But it's sort of too good. It distills information out ot the relationships betw
   - Name
   - certain male keywords
   - extracurriculars
+- Juliard
+  - "Hear the shoes"
 
+#### Debiasing Word Embeddings
 
+- Delete gender?
+- Identify the gender "dimension"
+- Social Science
 
+How do we define good?
 
+- Ask people, via mechanical turk
+- There are costs. "granmothering in"
+
+Should we debias society or word embeddings? Why not both?
+
+A model of a better world.
+
+Removing visible or unsightly bias does not remove the bias, just the evidence.
+
+#### Unconscious Bias
+
+Princeton bias tests, associations
+
+The easiest moment in which to intervene is, of course, as soon as possible.
