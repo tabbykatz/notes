@@ -430,3 +430,82 @@ After reloading the rails console:
 ## Findings, Part 2
 
 The SQL command above, `ALTER TABLE ONLY applications DROP COLUMN IF EXISTS user_id;`, is an effective solution to the problem. I believe I will need DB team involvement to run this command in development, because as far as I can tell ActiveRecord does not support this syntax.
+
+## Does `self.ignored_columns` propagate behaviour down?
+
+In this test I rebuilt the database with user_id on all tables, then added these changes ot the classes in question
+
+```ruby
+class Application < ApplicationRecord
+  self.ignored_columns += ["user_id"]
+end
+```
+
+```ruby
+class UserApplication < Application
+  self.ignored_columns -= %w(user_id)
+end
+```
+
+```ruby
+class PreApplication < Application
+  self.ignored_columns -= %w(user_id)
+end
+```
+
+The migration run:
+
+```ruby
+class RemoveUserIdFromApplications < ActiveRecord::Migration[6.0]
+  def change
+    if ActiveRecord::Base.connection.column_exists?(:applications , :user_id)
+      safety_assured {execute "ALTER TABLE ONLY applications DROP COLUMN user_id;"}
+    end
+  end
+end
+```
+
+## Findings, Part 3
+
+Success! This seems ot have overridden the ignored_columns behaviour in the children. Its counter-intuitive to me at the point, but it was effective, as you can see:
+
+```ruby
+[4] pry(main)> Application.column_names.include? "user_id"
+=> false
+[5] pry(main)> UserApplication.column_names.include? "user_id"
+=> true
+[6] pry(main)> PreApplication.column_names.include? "user_id"
+=> true
+```
+
+This makes the idea of having every dev run this migration much simpler than having to exec into their docker containers.
+
+## One last test
+
+Nav asked me to also check the negative scenario, where only the child tables have the column as in production, and the migration is run. The previous test left me in this exact place so I generated a new migration on top of that state just like the one before.
+
+```ruby
+class RemoveUserIdFromApplications < ActiveRecord::Migration[6.0]
+  def change
+    if ActiveRecord::Base.connection.column_exists?(:applications , :user_id)
+      safety_assured {execute "ALTER TABLE ONLY applications DROP COLUMN user_id;"}
+    end
+  end
+end
+```
+
+Everything remained as expected and no errors were raised.
+
+```ruby
+[8] pry(main)> Application.column_names.include? "user_id"
+=> false
+[9] pry(main)> PreApplication.column_names.include? "user_id"
+=> true
+[10] pry(main)> UserApplication.column_names.include? "user_id"
+[2022-07-28T19:11:19.919-07:00] WARN: Creating scope :in_progress. Overwriting existing method UserApplication.in_progress.
+=> true
+```
+
+Thanks, Nav!
+
+It would appear that this migration in addition to the single-line changes in Application, UserApplication, and PreApplication are the solution to run in dev environments.
