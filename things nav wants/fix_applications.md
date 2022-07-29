@@ -4,6 +4,8 @@
 
 Upon creating a new admin page, it was dicovered that while the thouroughly tested tool worked locally it failed in production. The cause was a call to ApplicationRepository to get `user_id`. This failed because `user_id` was not a column on Applicaiton in production, though it is in developement. With the help of Anthony Ruozzi, I learned that a migration to add `user_id` from at least a year ago had failed in production without notice but appeared successful in development. The reason I was the first to discover this problem is my unconventional query, where the preferred query would be on UserApplication or PreApplication. These child tables of Application both have the requisite columns, and this is why a fix is not straightforward.
 
+A solution to the admin tool failure is already written, but the goal of this document is to find a solution to prevent the use of Application.user_id moving forward.
+
 Upon discussion with Anthony, Sandeep, and Nav, it was decided that it is preferable to not have the `user_id` column and that instead of fixing the migration we'd remove the column from development.
 
 ## Solution
@@ -20,7 +22,7 @@ class RemoveUserIdFromApplications < ActiveRecord::Migration[6.0]
 end
 ```
 
-### Before running the above migration:
+### Before running the above migration
 
 ```ruby
 [1] pry(main)> Application.column_names.include? 'user_id'
@@ -371,3 +373,60 @@ Referenced by:
 Inherits: applications
 Access method: heap
 ```
+## Another approach
+
+```ruby
+class RemoveUserIdFromApplications < ActiveRecord::Migration[6.0]
+  def change
+    if ActiveRecord::Base.connection.column_exists?(:applications , :user_id)
+      safety_assured {execute "ALTER TABLE ONLY applications DROP COLUMN user_id;"}
+    end
+  end
+end
+```
+
+According to postgreSQL documentation,
+
+>Commands that are used for data querying, data modification, or schema modification (e.g., SELECT, UPDATE, DELETE, most variants of ALTER TABLE, but not INSERT or ALTER TABLE ... RENAME) typically default to including child tables and support the ONLY notation to exclude them
+
+And so, along with the self.ignored_column change in the Application class, this migration seemed promising to remove the `user_id` column from the applications table ONLY, but for reasons yet unclear it did not.
+
+```ruby
+[2] pry(main)> Application.column_names.include? 'user_id'
+=> false
+[3] pry(main)> UserApplication.column_names.include? 'user_id'
+=> false
+[4] pry(main)> PreApplication.column_names.include? 'user_id'
+=> false
+```
+
+## Meanwhile back in the Docker container
+
+```SQL
+You are now connected to database "db/monolith" as user "postgres".
+db/monolith=# ALTER TABLE ONLY applications DROP COLUMN IF EXISTS user_id;
+ALTER TABLE
+```
+
+If I attempt to re-run this command I am protected by IF EXISTS:
+
+```SQL
+db/monolith=# ALTER TABLE ONLY applications DROP COLUMN IF EXISTS user_id;
+NOTICE:  column "user_id" of relation "applications" does not exist, skipping
+ALTER TABLE
+```
+
+After reloading the rails console:
+
+```ruby
+[9] pry(main)> Application.column_names.include? "user_id"
+=> false
+[10] pry(main)> PreApplication.column_names.include? "user_id"
+=> true
+[11] pry(main)> UserApplication.column_names.include? "user_id"
+=> true
+```
+
+## Findings, Part 2
+
+The SQL command above, `ALTER TABLE ONLY applications DROP COLUMN IF EXISTS user_id;`, is an effective solution to the problem. I believe I will need DB team involvement to run this command in development, because as far as I can tell ActiveRecord does not support this syntax.
